@@ -1,0 +1,226 @@
+@font-face {
+    font-family: 'Graphik';
+    src: url("../fonts/Graphik-Regular-Web.eot") format("eot"),
+      url("../fonts/Graphik-Regular-Web.woff2") format("woff2"),
+      url("../fonts/Graphik-Regular-Web.woff") format("woff"),
+      url("../fonts/Graphik-Regular-Web.woff") format("truetype");
+  }
+  @font-face {
+    font-style: italic;
+    font-weight: normal;
+    font-family: 'Graphik';
+    src: url("../Graphik-RegularItalic-Web.eot") format("eot"),
+      url("../fonts/Graphik-RegularItalic-Web.woff2") format("woff2"),
+      url("../fonts/Graphik-RegularItalic-Web.woff") format("woff"),
+      url("../fonts/Graphik-RegularItalic-Web.ttf") format("truetype");
+  }
+  @font-face {
+    font-weight: 500;
+    font-style: normal;
+    font-family: 'Graphik';
+    src: url("../fonts/Graphik-Medium-Web.eot") format("eot"),
+      url("../fonts/Graphik-Medium-Web.woff2") format("woff2"),
+      url("../fonts/Graphik-Medium-Web.woff") format("woff"),
+      url("../fonts/Graphik-Medium-Web.ttf") format("truetype");
+  }
+  
+  
+  @font-face {
+    font-weight: 700;
+    font-style: normal;
+    font-family: 'Graphik';
+    src: url("../fonts/Graphik-Bold-Web.eot") format("eot"),
+      url("../fonts/Graphik-Bold-Web.woff2") format("woff2"),
+      url("../fonts/Graphik-Bold-Web.woff") format("woff"),
+      url("../fonts/Graphik-Bold-Web.ttf") format("truetype");
+    }
+  
+  
+  @font-face {
+    font-weight: 900;
+    font-style: normal;
+    font-family: 'Graphik';
+    src: url("../fonts/Graphik-Black-Web.eot") format("eot"),
+    url("../fonts/Graphik-Black-Web.woff2") format("woff2"),
+    url("../fonts/Graphik-Black-Web.woff") format("woff"),
+    url("../fonts/Graphik-Black-Web.ttf") format("truetype");
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    margin-top: 32px;
+    color: #1B1B1B;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(60px 80px)); 
+    grid-column-gap: 32px;
+    grid-template-rows: 75px 1fr 68px; 
+    grid-template-areas:
+      'header header header header header header header header header header header header'
+      'menu menu menu content content content content content content content content content'
+      'footer footer footer footer footer footer footer footer footer footer footer footer';
+}
+
+.container{
+    width: 100vw;
+    padding: 0 64px; 
+    border: 1px solid red;
+} 
+
+.wrap{
+    width: 592px;
+    border: 1px solid red;
+}
+
+.header {
+    grid-area: header;
+    border: 1px solid red;
+    display: flex;
+}
+
+
+
+.header-block{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 32px;
+}  
+
+.header-block__logo{
+    display: flex;
+    justify-content: space-between;
+ 
+}
+
+.header-block__name{
+    font-family: 'Graphik';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.header-block__name span{
+    color:#7D7D7D;
+}
+
+.header-block__ico-menu{
+    padding-top: 8px;
+} 
+/* Меню слева */
+.nav {
+    grid-area: menu;
+    border: 1px solid red;
+    margin-top: 173px;
+    margin-left: 64px;
+  }
+  
+.menu_link{
+    text-decoration: none;
+    color: #1B1B1B;
+}
+.menu_item{
+    font-family: 'Graphik';
+    margin-bottom: 16px;
+    list-style-type: none;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* Блок описания */
+.description {
+    grid-area: content;
+    border: 1px solid red;
+  }
+  
+.description__h1{
+    font-family: 'Graphik';
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 56px;
+    border: 1px solid red;
+}
+
+.description__level{
+    font-family: 'Graphik';
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px; 
+    margin-top: 16px;
+    margin-bottom: 64px;
+    border: 1px solid red;  
+}
+
+.description_text{
+    font-family: 'Graphik';
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid red;
+}
+
+.description__h2{
+    font-family: 'Graphik';
+    font-size: 32px;
+    line-height: 40px;
+    border: 1px solid red;
+    margin-top: 80px;
+    margin-bottom: 24px;
+}
+
+.description__h3{
+    font-family: 'Graphik';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 48px;
+}
+
+ .desktop_block{
+    border: 1px solid blue; 
+    display: grid;
+    grid-template-columns: repeat(4, 176px);
+    grid-column-gap: 32px;
+
+}
+.desktop__content{
+    border: 1px solid blue;    
+}
+
+.desktop__content{
+    margin-top: 30px;
+}
+
+.desktop_content-mod{
+    font-family: Graphik;
+    font-size: 14px;
+    line-height: 20px;
+    color:#7D7D7D;
+}
+
+.desktop_number-mod{
+    font-family: Graphik;
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 8px;
+}
+
+.desktop__img{
+    margin-top: 48px;
+}
+
+
+
+/* Подвал */
+.footer {
+    grid-area: footer;
+    border: 1px solid red;
+  }
+.footer__win{
+    font-family: 'Graphik';
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
