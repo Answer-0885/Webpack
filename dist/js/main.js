@@ -16,7 +16,17 @@
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_one__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/one */ \"./modules/one.js\");\n/* harmony import */ var _modules_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/form */ \"./modules/form.js\");\n\r\n\r\n\r\n\r\n(0,_modules_one__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\r\n;(0,_modules_form__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_buttonBlock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/buttonBlock */ \"./modules/buttonBlock.js\");\n/* harmony import */ var _modules_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/form */ \"./modules/form.js\");\n\r\n\r\n\r\n\r\n(0,_modules_buttonBlock__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\r\n;(0,_modules_form__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./modules/buttonBlock.js":
+/*!********************************!*\
+  !*** ./modules/buttonBlock.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst buttonBlock = () => {\r\n const button = document.querySelector('.button-block__button');\r\n\r\n button.addEventListener('click', ()=> {\r\n    button.style.background = 'linear-gradient(206.57deg, #DD80ED 0%, #3D28E3 83.33%';\r\n    const buttonClick = () => {\r\n        button.setAttribute('disabled', true)\r\n        button.style.background = '#CBCBCC';\r\n    }\r\n\r\n    setTimeout(buttonClick, 1000)\r\n    })\r\n\r\n}\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (buttonBlock);\n\n//# sourceURL=webpack:///./modules/buttonBlock.js?");
 
 /***/ }),
 
@@ -27,16 +37,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\r\nconst form = () => {\r\n   const input = document.querySelector('.UI__input');\r\n   const hint = document.querySelector('.UI__hint');\r\n   const error = document.querySelector('.UI__error');\r\n   console.dir(input);\r\n\r\n   input.addEventListener('input', (event)=> {\r\n\r\n      if(event.target.value !== \"\"){\r\n         hint.style.opacity = \"1\"\r\n         error.style.opacity = '1'\r\n      } else{\r\n         hint.style.opacity = \"0\"\r\n         error.style.opacity = '0'\r\n      }\r\n   });\r\n\r\n   input.addEventListener('change', (event)=> {\r\n      event.preventDefault()\r\n   \r\n    if (!input.value.includes('@')) {\r\n      input.classList.add('UI__input_error'); \r\n      hint.classList.add('UI__hint_error'); \r\n      error.classList.add('UI__hint_error'); \r\n    } else if(input.value.includes('@') || input.value == '') {\r\n      input.classList.remove('UI__input_error'); \r\n      hint.classList.remove('UI__hint_error'); \r\n      error.classList.remove('UI__hint_error'); \r\n    }\r\n\r\n   }\r\n)\r\n\r\n}\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (form);\n\n//# sourceURL=webpack:///./modules/form.js?");
-
-/***/ }),
-
-/***/ "./modules/one.js":
-/*!************************!*\
-  !*** ./modules/one.js ***!
-  \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst one = () => {\r\n   console.log('модуль One!')\r\n}\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (one);\n\n//# sourceURL=webpack:///./modules/one.js?");
 
 /***/ })
 

@@ -1,6 +1,6 @@
-import one from './modules/one'
+import buttonBlock from './modules/buttonBlock'
 import form from './modules/form'
 
 
-one()
+buttonBlock()
 form()
