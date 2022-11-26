@@ -432,6 +432,128 @@ body{
     cursor: pointer;
 }
 
+/* Раздел чекбокс, радиобаттон */
+.checkbox-radio__grid{
+    display: grid;
+    margin-top: 32px;
+    grid-template-columns: 344px 344px;
+    grid-column-gap: 24px;;
+}
+.checkbox-radio__input {
+    width: 24px;
+    height: 24px;
+    border-color: #3D28E3;
+}
+
+.checkbox-radio__label{
+    padding-left: 6px;
+    font-family: Graphik;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+
+.checkbox-radio__left {
+    display: flex;
+}
+
+.checkbox-radio__right{
+    display: flex;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    display: none;
+  }
+
+  /* стили для метки */
+label {
+    cursor: pointer;
+    font-family: Graphik;
+    font-size: 16px;
+    line-height: 24px;
+    vertical-align: middle;
+  }
+   
+  /* формируем внешний вид чекбокса в псевдоэлементе before */
+  label:before {
+    content: " ";
+    color: #000;
+    display: inline-block;
+    font: 20px/30px Arial;
+    margin-right: 15px;
+    position: relative;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background: #FFF;
+    border: 2px solid #AEADAE;
+    border-image: initial;
+    vertical-align: middle;
+  }
+   
+  /* вариации внешнего вида в зав-ти от статуса checkbox */
+  /* checked */
+  input:checked + label:before {
+    content: "x";
+  }
+  /* disabled */
+  input:disabled + label:before {
+    background: #eee;
+    color: #aaa;
+  }
+
+
+
+  /* Аккордеон */
+  .accord{
+    width: 904px;
+}
+
+.accord__element-content {
+	display: none; 
+	padding: 20px;
+    font-family: Graphik;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 32px;
+}
+.accord__element {
+	margin-bottom: 6px;
+}
+.accord__title {
+	cursor: pointer;
+	padding: 24px 0px 15px 0px;
+    font-family: Graphik;
+    font-size: 16px;
+    line-height: 24px;
+	position: relative;
+	color: #7D7D7D;
+    border: transparent;
+    border-bottom: 2px solid #AEADAE;
+	transition: all 200ms ease-out;
+    cursor: pointer;
+    position: relative;
+}
+
+.accord__title:after {
+    content: url('../img/Path.svg');
+    position: absolute;
+    right: 0;
+}
+
+.accord__title:hover {
+	color:#1B1B1B;
+    font-weight: 500;
+    border-color:#3D28E3
+}
+
+.accord__content > div:last-of-type {
+	margin-bottom: 0;
+}
+
+
+
+  
 /* Подвал */
 .footer {
     grid-area: footer;
