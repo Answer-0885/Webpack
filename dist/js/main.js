@@ -16,7 +16,17 @@
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_buttonBlock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/buttonBlock */ \"./modules/buttonBlock.js\");\n/* harmony import */ var _modules_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/form */ \"./modules/form.js\");\n\r\n\r\n\r\n\r\n(0,_modules_buttonBlock__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\r\n;(0,_modules_form__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_buttonBlock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/buttonBlock */ \"./modules/buttonBlock.js\");\n/* harmony import */ var _modules_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/form */ \"./modules/form.js\");\n/* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/accordeon */ \"./modules/accordeon.js\");\n\r\n\r\n\r\n\r\n\r\n(0,_modules_buttonBlock__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n(0,_modules_form__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n(0,_modules_accordeon__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./modules/accordeon.js":
+/*!******************************!*\
+  !*** ./modules/accordeon.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst accordeon = ()=> {\r\n    const accordeon = () => {\r\n        const accordeon = document.querySelector('.accord__content');\r\n        const element = document.querySelectorAll('.accord__element');\r\n        const elementContent = document.querySelectorAll('.accord__element-content');\r\n     \r\n        accordeon.addEventListener('click', (e) => {\r\n           if (e.target.closest('.accord__element')) {\r\n              const elementBtn = e.target.closest('.accord__element');\r\n              element.forEach((elem, i) => {\r\n                 if (elem === elementBtn && elementContent[i].style.display === '') {\r\n                    elem.classList.add('active');\r\n                    elementContent[i].style.display = 'block';\r\n\r\n                    \r\n                 } else if (elem === elementBtn && elementContent[i].style.display === 'block') {\r\n                    elem.classList.remove('active');\r\n                    elementContent[i].style.display = '';\r\n                 } else {\r\n                    elem.classList.remove('active');\r\n                    elementContent[i].style.display = '';\r\n                 };\r\n              });\r\n           };\r\n        });\r\n     }\r\n}\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (accordeon);\n\n//# sourceURL=webpack:///./modules/accordeon.js?");
 
 /***/ }),
 

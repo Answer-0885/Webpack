@@ -65,7 +65,7 @@ body{
       'menu menu menu content content content content content content content content content'
       'footer footer footer footer footer footer footer footer footer footer footer footer'; */
       'header header header header'
-       'menu content content content'
+        'menu content content content'
        'footer footer footer footer'
 
 }
@@ -98,6 +98,8 @@ body{
 .header-block__logo{
     display: flex;
     justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
  
 }
 
@@ -183,11 +185,47 @@ body{
     margin-top: 48px;
 }
 
-@media (max-width: 1200px){
-    .desktop{
+/* Десктоп (1200+) */
+@media (min-width: 1200px){
+    .tablet{
+        display: none;
+    }
+    .Phone{
+        display: none;
+    }
+
+}
+
+/* Экран Десктопа (1200+)*/
+@media (min-width: 1200px){
+    .tablet{
+        display: none;
+    }
+    .Phone{
         display: none;
     }
 }
+
+/* Экран Планшета (736+) */
+@media (min-width: 736px) and (max-width:1199px){
+    .desktop{
+        display: none;
+    }
+    .Phone{
+        display: none;
+    }
+}
+
+/* Экран телефона */
+@media (min-width: 320px) and (max-width:735px){
+    .desktop{
+        display: none;
+    }
+    .tablet{
+        display: none;
+    }
+}
+
  .desktop_block{
     border: 1px solid blue; 
     display: grid;
@@ -230,7 +268,7 @@ body{
 
 .typography__desktop, .typography__telephone {
     padding-bottom: 14px;
-
+    cursor: pointer;
 }
 
 .typography__desktop-telephone_change{
@@ -264,31 +302,54 @@ body{
     font-family: Graphik;
 }
 
+/* Заголовок h1 для Десктоп */
 .typography_h1{
     font-size: 48px;
     line-height: 56px;
-    font-weight: bold;
-    
+    font-weight: bold;    
+}
+/* Заголовок h1 для телефонов */
+.typography_h1-phone{
+    font-family: Graphik;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;   
 }
 
+/* Заголовок h2 для Десктоп */
 .typography_h2{
     font-size: 32px;
     line-height: 40px;
-    font-weight: bold;
-    
+    font-weight: bold;   
 }
 
+/* Заголовок h2 для телефонов */
+.typography_h2-phone{
+    font-family: Graphik;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: bold;   
+}
+
+/* Заголовок h3 для Десктоп */
 .typography_h3{
     font-size: 24px;
     line-height: 32px;
-    font-weight: medium;
-    
+    font-weight: 500; 
+}
+
+/* Заголовок h3 для телефонов */
+.typography_h3-phone{
+    font-family: Graphik;
+    font-size: 20px;
+    line-height: 28px; 
+    font-weight: 500; 
 }
 
 .typography_h4{
     font-size: 18px;
     line-height: 28px;
-    font-weight: medium;
+    font-weight: 500;
 }
 
 .typography_lead{
