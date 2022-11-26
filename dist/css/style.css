@@ -315,18 +315,21 @@ body{
     font-weight: 300;
 }
 
-/* Раздел UI */
-/* .UI__form{
-    display: inline-block;
-    border-bottom: 2px solid black;
-} */
+.UI__span{
+    font-family: Graphik;
+    font-size: 12px;
+    line-height: 20px;
+    color: #7D7D7D;
+    margin-top: 68px;
+    opacity: 0;
+}
 .UI__input{
     box-sizing: border-box;
     width: 280px;
     border: transparent;
     border-bottom: 2px solid #AEADAE;
     padding-bottom: 6px;
-    margin-top: 92px;
+    margin-top: 2px;
     text-decoration: none;
 }
 
