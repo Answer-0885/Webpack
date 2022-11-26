@@ -171,12 +171,27 @@
                   <h2 class="description__h2">UI</h2>
                   <p class="description__h3">Текстовое поле</p>
                   <form class="UI__form" action="#">
-                     <p class="UI__span">E-mail</p>
-                     <input class="UI__input" type="text" placeholder="E-mail">
+                     <p class="UI__hint">E-mail</p>
+                     <input class="UI__input" type="text" placeholder="E-mail" >
+                     <p class="UI__error" >Текст ошибки</p> 
                   </form>
-                  <br><br><br>   
+     
                </div>
-               
+               <!-- Раздел выпадающий список -->
+               <div class="drop-down-list">
+                  <h3 class="description__h3">Выпадающий список</h3>
+                  <p class="typography__text typography_p16 drop-down-list_margin-top">
+                     Компонент состоит из текстового поля и выпадающей подсказки
+                  </p>
+                  <input type="text" class="drop-down-list__input" placeholder="Выберите что-нибудь" list="list">
+                  <datalist id="list">
+                     <option value="">Первый стул</option>
+                     <option value="">Второй стул</option>
+                     <option value="">Выбранный пункт</option>
+                     <option value="">Теорема Эскобара</option>
+                  </datalist>
+               </div> 
+               <br><br><br>
 
             </div>
 

@@ -315,7 +315,7 @@ body{
     font-weight: 300;
 }
 
-.UI__span{
+.UI__hint{
     font-family: Graphik;
     font-size: 12px;
     line-height: 20px;
@@ -323,6 +323,19 @@ body{
     margin-top: 68px;
     opacity: 0;
 }
+/* Если ошибка в инпуте*/
+.UI__hint_error{
+    color: #E80F3B;
+}
+
+.UI__error{
+    opacity: 0;
+    font-family: Graphik;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 6px;
+}
+
 .UI__input{
     box-sizing: border-box;
     width: 280px;
@@ -331,6 +344,12 @@ body{
     padding-bottom: 6px;
     margin-top: 2px;
     text-decoration: none;
+    cursor: pointer; 
+}
+
+.UI__input_error{
+    border-bottom: 2px solid #E80F3B;
+    box-shadow: 0 2px 0 0 #E80F3B;
 }
 
 .UI__input::placeholder{
@@ -343,17 +362,40 @@ body{
     border-color: #3E29E3;
 }
 
-/* .UI__form:focus{
-    border-bottom: #3E29E3;
-} */
-
 .UI__input:focus{
     outline: none;
     border-bottom: 2px solid #3E29E3;
     box-shadow: 0 2px 0 0 #3E29E3;
 }
 
+/* Выпадающий список */
 
+.drop-down-list{
+    margin-top: 70px;
+}
+
+.drop-down-list_margin-top{
+    margin-top: 24px;
+}
+
+.drop-down-list__input{
+    box-sizing: border-box;
+    width: 280px;
+    border: transparent;
+    border-bottom: 2px solid #AEADAE;
+    padding-bottom: 6px;
+    margin-top: 2px;
+    text-decoration: none;
+    cursor: pointer; 
+    margin-top: 48px;
+}
+
+.drop-down-list__input::placeholder{
+    font-family: Graphik;
+    font-size: 16px;
+    line-height: 24px;
+    color:#1B1B1B;
+}
 
 /* Подвал */
 .footer {
