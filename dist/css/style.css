@@ -59,10 +59,15 @@ body{
     grid-template-columns: repeat(12, minmax(60px 80px)); 
     grid-column-gap: 32px;
     grid-template-rows: 75px 1fr 68px; 
+    border: 1px solid red;
     grid-template-areas:
-      'header header header header header header header header header header header header'
+      /* 'header header header header header header header header header header header header'
       'menu menu menu content content content content content content content content content'
-      'footer footer footer footer footer footer footer footer footer footer footer footer';
+      'footer footer footer footer footer footer footer footer footer footer footer footer'; */
+      'header header header header'
+       'menu content content content'
+       'footer footer footer footer'
+
 }
 
 .container{
@@ -178,6 +183,11 @@ body{
     margin-top: 48px;
 }
 
+@media (max-width: 1200px){
+    .desktop{
+        display: none;
+    }
+}
  .desktop_block{
     border: 1px solid blue; 
     display: grid;
@@ -210,6 +220,101 @@ body{
 .desktop__img{
     margin-top: 48px;
 }
+
+/* Раздел Типографика */
+.typography__desktop-telephone{
+    display: flex;
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.typography__desktop, .typography__telephone {
+    padding-bottom: 14px;
+
+}
+
+.typography__desktop-telephone_change{
+    font-family: Graphik;
+    font-weight: 500;
+    border-bottom: 2px solid #3E29E3;
+}
+
+.typography__hr{
+    width: 904px;
+    color: #CBCBCC;
+}
+
+.typography__grid{
+    display: grid;
+    grid-template-columns: 280px 592px;
+    grid-template-rows: repeat(8, 1fr);
+    grid-row-gap: 48px;
+    grid-column-gap: 32px;
+    margin-top: 48px;
+}
+
+.typography__header{
+    font-family: Graphik;
+    font-size: 14px;
+    line-height: 20px;
+    color: #7D7D7D;
+}
+
+.typography__text{
+    font-family: Graphik;
+}
+
+.typography_h1{
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: bold;
+    
+}
+
+.typography_h2{
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;
+    
+}
+
+.typography_h3{
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: medium;
+    
+}
+
+.typography_h4{
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: medium;
+}
+
+.typography_lead{
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 300;
+}
+
+.typography_p18{
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+}
+
+.typography_p16{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+}
+
+.typography_p14{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+}
+
 
 
 
