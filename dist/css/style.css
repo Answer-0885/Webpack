@@ -61,9 +61,6 @@ body{
     grid-template-rows: 75px 1fr 68px; 
     border: 1px solid red;
     grid-template-areas:
-      /* 'header header header header header header header header header header header header'
-      'menu menu menu content content content content content content content content content'
-      'footer footer footer footer footer footer footer footer footer footer footer footer'; */
       'header header header header'
         'menu content content content'
        'footer footer footer footer'
@@ -93,21 +90,22 @@ body{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 32px;
+    width: 1344px;
 }  
 
 .header-block__logo{
     display: flex;
     justify-content: space-between;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
- 
 }
 
 .header-block__name{
     font-family: 'Graphik';
-    font-weight: normal;
+    font-weight: 500;
     font-size: 14px;
     line-height: 20px;
+    margin-left: 24px;
+    border: 1px solid red;
+    width: 130px;
 }
 
 .header-block__name span{
@@ -117,6 +115,112 @@ body{
 .header-block__ico-menu{
     padding-top: 8px;
 } 
+
+
+
+/* Бургер меню */
+.burger-menu{
+    display: block;
+    position: absolute;
+    background-image: url('../img/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1344px;
+    height: 756px;
+    left: 100%;
+}
+
+.burger-menu__close{
+
+}
+
+.burger-menu__left-block{
+    max-width: 100vw;
+    height: auto;
+    width: 760px;
+    height: 740px;
+    background-color: #ffffff;
+    margin: 8px 576px 8px 8px;
+}
+
+.burger-menu__header{
+    display: flex;
+}
+
+.burger-menu__logo{
+    margin-left: 56px;
+    margin-top: 24px;
+}
+
+.burger-menu__description{
+    margin-left: 64px;
+    margin-top: 35px;
+}
+
+.burger-menu__task{
+    font-family: Graphik;
+    font-size: 14px;
+    line-height: 20px;
+    color: #7D7D7D;  
+}
+
+.burger-menu__description>h2{
+    font-family: Graphik;
+    font-size: 32px;
+    line-height: 40px; 
+    margin-top: 60px; 
+    color: #1B1B1B;
+}
+
+.burger-menu__for-me{
+    font-family: Graphik;
+    width: 384px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 24px;
+    color: #1B1B1B;
+}
+
+.burger-menu__phone-block{
+    margin-top: 32px;
+}
+
+.burger-menu__phone{
+    font-family: Graphik;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color:#1B1B1B;
+    text-decoration: none;
+}
+
+.burger-menu__socseti{
+    display: flex;
+    margin-top: 300px;
+    border: 1px solid red;
+}
+
+.burger-menu__socseti-ico{
+    border: 1px solid red;
+    bottom: 0px;
+}
+
+.burger-menu__socseti-text{
+    font-family: Graphik;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 20px;
+    padding-left: 20px;
+
+}
+.burger-menu__socseti-text>a{
+    text-decoration: none;
+}
+
+
+
+
 /* Меню слева */
 .nav {
     grid-area: menu;
@@ -185,23 +289,15 @@ body{
     margin-top: 48px;
 }
 
-/* Десктоп (1200+) */
-@media (min-width: 1200px){
-    .tablet{
-        display: none;
-    }
-    .Phone{
-        display: none;
-    }
-
-}
-
 /* Экран Десктопа (1200+)*/
 @media (min-width: 1200px){
     .tablet{
         display: none;
     }
     .Phone{
+        display: none;
+    }
+    .typography_phone{
         display: none;
     }
 }
@@ -214,6 +310,9 @@ body{
     .Phone{
         display: none;
     }
+    .typography_phone{
+        display: none;
+    }
 }
 
 /* Экран телефона */
@@ -223,6 +322,21 @@ body{
     }
     .tablet{
         display: none;
+    }
+    .description__h1{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .description__h2{
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .description__h3{
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .typography_desktop{
+        display: none; 
     }
 }
 
@@ -259,7 +373,7 @@ body{
     margin-top: 48px;
 }
 
-/* Раздел Типографика */
+/* Раздел Типографика для Десктоп */
 .typography__desktop-telephone{
     display: flex;
     gap: 32px;
@@ -308,13 +422,6 @@ body{
     line-height: 56px;
     font-weight: bold;    
 }
-/* Заголовок h1 для телефонов */
-.typography_h1-phone{
-    font-family: Graphik;
-    font-size: 32px;
-    line-height: 40px;
-    font-weight: bold;   
-}
 
 /* Заголовок h2 для Десктоп */
 .typography_h2{
@@ -323,26 +430,10 @@ body{
     font-weight: bold;   
 }
 
-/* Заголовок h2 для телефонов */
-.typography_h2-phone{
-    font-family: Graphik;
-    font-size: 28px;
-    line-height: 36px;
-    font-weight: bold;   
-}
-
 /* Заголовок h3 для Десктоп */
 .typography_h3{
     font-size: 24px;
     line-height: 32px;
-    font-weight: 500; 
-}
-
-/* Заголовок h3 для телефонов */
-.typography_h3-phone{
-    font-family: Graphik;
-    font-size: 20px;
-    line-height: 28px; 
     font-weight: 500; 
 }
 
@@ -374,6 +465,35 @@ body{
     font-size: 14px;
     line-height: 20px;
     font-weight: 300;
+}
+
+/* Типографика для телефонов */
+/* .typography_phone {
+    display: none;
+} */
+
+/* Заголовок h1 для телефонов */
+.typography_h1-phone{
+    font-family: Graphik;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;   
+}
+
+/* Заголовок h2 для телефонов */
+.typography_h2-phone{
+    font-family: Graphik;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: bold;   
+}
+
+/* Заголовок h3 для телефонов */
+.typography_h3-phone{
+    font-family: Graphik;
+    font-size: 20px;
+    line-height: 28px; 
+    font-weight: 500; 
 }
 
 

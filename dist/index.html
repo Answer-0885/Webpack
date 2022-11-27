@@ -4,9 +4,9 @@
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
    <link rel="stylesheet prefetch" href="https://cdn.rawgit.com/mfd/e7842774e037edf15919037594a79b2b/raw/665bdfc532094318449f1010323c84013d5af953/graphik.css">
-   <accord__title>Document</accord__title>
+   <title>Document</title>
    <script src="./js/main.js" defer></script>
    <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -18,7 +18,7 @@
                <a href="index.html">
                   <img src="./img/logo.svg" alt="Логотип">
                </a>
-                  <p class="header-block__name">Закатов 
+                  <p class="header-block__name">Закатов <br> 
                      <span>Виталий Юрьевич</span></p>
              </div>
              <div></div>
@@ -31,11 +31,72 @@
              <div></div>
              <div></div>
              <div></div>
+
              <div class="header-block__ico-menu">
                <a href="#">
                <img src="./img/ico_menu.svg" alt="Иконка меню"></a>
             </div>
       </div>
+
+            <!-- Бургер меню -->
+         <div class="burger-menu">
+            <!-- <div class="burger-menu__close">
+               <img src="./img/ico_menu_close.svg" alt="Крестик">
+            </div> -->
+            <div class="burger-menu__left-block">
+
+               <div class="burger-menu__header">  
+
+                 <div class="burger-menu__logo">            
+                  <a href="index.html">
+                     <img src="./img/logo.svg" alt="Логотип">
+                  </a>
+               </div>
+
+               <div class="burger-menu__description">
+                  <p class="burger-menu__task">Задание выполнил</p>
+                  <h2>Закатов <br> Виталий Юрьевич</h2>
+                  <p class="burger-menu__for-me"> Краткое описание. Например, студент 4 курса специальности «Прикладная информатика» в КузГТУ
+                  </p>
+                  <p class="burger-menu__phone-block">
+                     <a class="burger-menu__phone" href="tel:+7 (900)  058 59 99">+7 (900)  058 59 99</a>
+                  </p>
+                  <div class="burger-menu__socseti">
+                     <p class="burger-menu__socseti-ico">
+                     <a href="#">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <g filter="url(#filter0_d_0_1)">
+                           <path d="M32 52C45.2548 52 56 41.2548 56 28C56 14.7452 45.2548 4 32 4C18.7452 4 8 14.7452 8 28C8 41.2548 18.7452 52 32 52Z" fill="white"/>
+                           </g>
+                           <path d="M40 20V26H38V22H34V20H40Z" fill="#3E29E3"/>
+                           <path d="M38 34H26L26 22H32V24H28V32H36V28H38V34Z" fill="#3E29E3"/>
+                           <defs>
+                           <filter id="filter0_d_0_1" x="0" y="0" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                           <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                           <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                           <feOffset dy="4"/>
+                           <feGaussianBlur stdDeviation="4"/>
+                           <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"/>
+                           <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+                           <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+                           </filter>
+                           </defs>
+                           </svg> 
+                     </a>
+                  </p>
+
+                        <p class="burger-menu__socseti-text">
+                           <a href="https://vk.com/id7382448">Ссылка на соцсеть/</a><a href="#">мессенджер</a> 
+                        </p>
+
+
+                  </div>
+               </div>
+             </div>
+ 
+
+            </div>
+        </div>
    </header>
 
       <section class="description">
@@ -133,8 +194,8 @@
                   </div>
                </div>
 
-               <!-- Раздел Типографика -->
-               <div class="typography">
+               <!-- Раздел Типографика для Десктоп -->
+               <div class="typography typography_desktop">
                   <h2 class="description__h2">Типографика</h2>
                   <p class="description_text">Используется шрифт Graphik. На телефонах стили типографики переопределяются</p>
                   <div class="typography__desktop-telephone">
@@ -168,7 +229,9 @@
                </div>
 
               <!-- Раздел Типографика для телефонов -->
-              <div class="typography">
+              <div class="typography typography_phone">
+               <h2 class="description__h2">Типографика</h2>
+               <p class="description_text">Используется шрифт Graphik. На телефонах стили типографики переопределяются</p>
                <div class="typography__desktop-telephone">
                   <div class="typography__desktop">
                      <p class="description_text">Десктоп</p>
@@ -313,7 +376,6 @@
                </div>
 
             </div>
-
       </section>
 
          <nav class="nav">
