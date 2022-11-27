@@ -711,8 +711,16 @@ label {
     line-height: 24px;
     margin-top: 32px;
 }
+
+/* Появление текста с анимацией */
+.accord{
+    margin-bottom: 160px;
+}
 .accord__element {
 	margin-bottom: 6px;
+    position: relative;
+    border: transparent;
+    border-bottom: 1px solid #AEADAE;
 }
 .accord__title {
 	cursor: pointer;
@@ -721,29 +729,62 @@ label {
     font-size: 16px;
     line-height: 24px;
 	position: relative;
-	color: #7D7D7D;
-    border: transparent;
-    border-bottom: 2px solid #AEADAE;
 	transition: all 200ms ease-out;
     cursor: pointer;
-    position: relative;
 }
 
-.accord__title:after {
+.accord__element-content{
+    cursor: pointer; 
+}
+
+.accord__svg {
     content: url('../img/Path.svg');
     position: absolute;
     right: 0;
+    top: 24px;
+    /* transform: rotate(180deg); */
+}
+
+.accord__svg.transform{
+    transform: rotate(180deg); 
 }
 
 .accord__title:hover {
 	color:#1B1B1B;
     font-weight: 500;
+}
+
+.accord__element:hover {
     border-color:#3D28E3
 }
+
+.bottom-border{
+    border-bottom: 2px solid #3E29E3;
+} 
 
 .accord__content > div:last-of-type {
 	margin-bottom: 0;
 }
+
+.open-text{
+    display: block; 
+    animation: openText 0.5s ease-in-out;
+}
+  
+  @keyframes openText {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.8;
+    }
+  }
+
+  .head-color{
+    font-family: Graphik;
+    font-weight: 500;
+    color:#3E29E3;
+  }
 
 
 
