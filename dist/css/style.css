@@ -67,6 +67,15 @@ body{
 
 }
 
+.overlay{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.7); /*затемнение*/
+  }
+
 .container{
     width: 100vw;
     padding: 0 64px; 
@@ -120,18 +129,22 @@ body{
 
 /* Бургер меню */
 .burger-menu{
-    display: block;
+    display: none;
     position: absolute;
     background-image: url('../img/bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 1344px;
     height: 756px;
-    left: 100%;
+    left: 0%;
+    top: 0%;
 }
 
 .burger-menu__close{
-
+    position: absolute;
+    top: 28px;
+    right: 63px;
+    cursor: pointer;
 }
 
 .burger-menu__left-block{

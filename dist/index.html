@@ -40,9 +40,12 @@
 
             <!-- Бургер меню -->
          <div class="burger-menu">
-            <!-- <div class="burger-menu__close">
-               <img src="./img/ico_menu_close.svg" alt="Крестик">
-            </div> -->
+            <div class="burger-menu__close">
+               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4142 10L19.1924 2.22184L17.7782 0.807624L10 8.5858L2.22183 0.807624L0.807612 2.22184L8.58579 10L0.807612 17.7782L2.22183 19.1924L10 11.4142L17.7782 19.1924L19.1924 17.7782L11.4142 10Z" fill="white"/>
+                  </svg>
+                  
+            </div>
             <div class="burger-menu__left-block">
 
                <div class="burger-menu__header">  
@@ -99,7 +102,8 @@
         </div>
    </header>
 
-      <section class="description">
+   <!-- Основной блок с контентом -->
+      <section id="description" class="description">
          <div class="wrap">
              <h1 class="description__h1">Тестовое задание</h1>
              <p class="description__level">Уровень: junior</p>
@@ -107,7 +111,7 @@
                 В шапке страницы укажи своё ФИО, так всем будет удобнее.
                 В менюхе под иконкой бургером мы хотели бы также видеть твои данные. Ну что, поехали?</p>
 
-             <h2 class="description__h2">Сетка</h2>
+             <h2 id="description__h2"  class="description__h2">Сетка</h2>
              <p class="description_text">Задание предполагает адаптивную вёрстку. 
                Используется 3 состояния в зависимости от устройства. 
                Сетка «резиновая» — переменной ширины.</p>
@@ -195,7 +199,7 @@
                </div>
 
                <!-- Раздел Типографика для Десктоп -->
-               <div class="typography typography_desktop">
+               <div id="typography" class="typography typography_desktop">
                   <h2 class="description__h2">Типографика</h2>
                   <p class="description_text">Используется шрифт Graphik. На телефонах стили типографики переопределяются</p>
                   <div class="typography__desktop-telephone">
@@ -265,7 +269,7 @@
 
 
                <!-- Раздел UI -->
-               <div class="UI">
+               <div id="UI" class="UI">
                   <h2 class="description__h2">UI</h2>
                   <p class="description__h3">Текстовое поле</p>
                   <form class="UI__form" action="#">
@@ -380,10 +384,10 @@
 
          <nav class="nav">
             <ul class="menu">
-               <li class="menu_item"><a class="menu_link" href="#">Напутственное слово</a></li>
-               <li class="menu_item"><a class="menu_link" href="#">Сетка</a></li>
-               <li class="menu_item"><a class="menu_link" href="#">Типографика</a></li>
-               <li class="menu_item"><a class="menu_link" href="#">UI</a></li>
+               <li class="menu_item"><a class="menu_link" href="#description">Напутственное слово</a></li>
+               <li class="menu_item"><a class="menu_link" href="#description__h2">Сетка</a></li>
+               <li class="menu_item"><a class="menu_link" href="#typography">Типографика</a></li>
+               <li class="menu_item"><a class="menu_link" href="#UI">UI</a></li>
             </ul>
          </nav>
 
