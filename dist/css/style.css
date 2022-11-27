@@ -73,7 +73,7 @@ body{
     width: 100%;
     height: 100%;
     z-index: 10;
-    background-color: rgba(0,0,0,0.7); /*затемнение*/
+    background-color: rgba(26, 25, 25, 0.7); /*затемнение*/
   }
 
 .container{
@@ -153,7 +153,7 @@ body{
     width: 760px;
     height: 740px;
     background-color: #ffffff;
-    margin: 8px 576px 8px 8px;
+    margin: 8px 36rem 8px 8px;
 }
 
 .burger-menu__header{
@@ -317,6 +317,9 @@ body{
 
 /* Экран Планшета (736+) */
 @media (min-width: 736px) and (max-width:1199px){
+    body{
+        grid-template-columns: repeat(8, minmax(56px 88px));
+    }
     .desktop{
         display: none;
     }
@@ -330,6 +333,10 @@ body{
 
 /* Экран телефона */
 @media (min-width: 320px) and (max-width:735px){
+    body{
+        grid-template-columns: repeat(4, minmax(56px 88px));
+        grid-column-gap: 24px;
+    }
     .desktop{
         display: none;
     }
@@ -350,6 +357,9 @@ body{
     }
     .typography_desktop{
         display: none; 
+    }
+    .burger-menu__left-block{   
+        margin: 8px 100px 8px 8px;
     }
 }
 
@@ -584,6 +594,14 @@ body{
     margin-top: 2px;
     text-decoration: none;
     cursor: pointer; 
+}
+
+.drop-down-list__hint{
+    opacity: 0;
+    font-family: Graphik;
+    font-size: 12px;
+    line-height: 20px;
+    color:#7D7D7D;
     margin-top: 48px;
 }
 
@@ -626,6 +644,7 @@ body{
     cursor: pointer;
 }
 
+
 /* Раздел чекбокс, радиобаттон */
 .checkbox-radio__grid{
     display: grid;
@@ -633,34 +652,22 @@ body{
     grid-template-columns: 344px 344px;
     grid-column-gap: 24px;;
 }
-.checkbox-radio__input {
-    width: 24px;
-    height: 24px;
-    border-color: #3D28E3;
-}
 
-.checkbox-radio__label{
-    padding-left: 6px;
+.checkbox-radio__label-checkbox{
     font-family: Graphik;
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 30px;
 }
 
-.checkbox-radio__left {
-    display: flex;
-}
-
-.checkbox-radio__right{
-    display: flex;
-}
 
 input[type="checkbox"], input[type="radio"] {
     display: none;
   }
 
   /* стили для метки */
-label {
+.checkbox-radio__label-checkbox,
+.checkbox-radio__label-radio {
     cursor: pointer;
     font-family: Graphik;
     font-size: 16px;
@@ -669,38 +676,63 @@ label {
   }
    
   /* формируем внешний вид чекбокса в псевдоэлементе before */
-  label:before {
+  .checkbox-radio__label-checkbox:before,
+  .checkbox-radio__label-radio:before {
     content: " ";
-    color: #000;
     display: inline-block;
-    font: 20px/30px Arial;
+    font: 20px/23px Arial;
     margin-right: 15px;
     position: relative;
     text-align: center;
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     background: #FFF;
     border: 2px solid #AEADAE;
     border-image: initial;
     vertical-align: middle;
   }
+ /* hover */
+ .checkbox-radio__input-checkbox:hover + 
+ .checkbox-radio__label-checkbox:before, 
+ .checkbox-radio__input-radio:hover + 
+ .checkbox-radio__label-radio:before {
+    content: "";
+    border-color: #3E29E3;
+  }
    
-  /* вариации внешнего вида в зав-ти от статуса checkbox */
   /* checked */
-  input:checked + label:before {
-    content: "x";
+  .checkbox-radio__input-checkbox:checked + .checkbox-radio__label-checkbox:before {
+    content: "\2714";
+    color:white;
+    background-color:#3E29E3;
+    border-color: #3E29E3;
   }
-  /* disabled */
-  input:disabled + label:before {
-    background: #eee;
-    color: #aaa;
+
+  /* Радиокнопка */
+  .checkbox-radio__right{
+    margin-left: 32px;
   }
+
+  .checkbox-radio__label-radio:before {
+    content: "";
+    border-radius: 50%;
+  } 
+
+  .checkbox-radio__input-radio:checked + .checkbox-radio__label-radio:before {
+    content: "\1F535";
+    color:#3E29E3;
+    font: 12px/24px Arial;
+    border-color: #3E29E3;
+    border-radius: 50%;
+  }
+
 
 
 
   /* Аккордеон */
   .accord{
-    width: 904px;
+    margin-top: 64px;
+    width: 56.5rem;
 }
 
 .accord__element-content {
@@ -709,7 +741,6 @@ label {
     font-family: Graphik;
     font-size: 16px;
     line-height: 24px;
-    margin-top: 32px;
 }
 
 /* Появление текста с анимацией */

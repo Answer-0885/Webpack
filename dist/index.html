@@ -4,7 +4,8 @@
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">  -->
+   <meta name="viewport" content="width=1312"/> 
    <link rel="stylesheet prefetch" href="https://cdn.rawgit.com/mfd/e7842774e037edf15919037594a79b2b/raw/665bdfc532094318449f1010323c84013d5af953/graphik.css">
    <title>Document</title>
    <script src="./js/main.js" defer></script>
@@ -287,15 +288,17 @@
                      Компонент состоит из текстового поля и выпадающей подсказки
                   </p>
                <form action="" class="drop-down-list__form">
+                  <p class="drop-down-list__hint">Выберите что-нибудь</p>
                   <input type="text" class="drop-down-list__input" placeholder="Выберите что-нибудь" list="list">
                   <datalist id="list">
-                     <option>Первый стул</option>
-                     <option>Второй стул</option>
-                     <option>Выбранный пункт</option>
-                     <option>Теорема Эскобара</option>
+                     <option value="Первый стул">Первый стул</option>
+                     <option value="Второй стул">Второй стул</option>
+                     <option value="Выбранный пункт">Выбранный пункт</option>
+                     <option value="Теорема Эскобара">Теорема Эскобара</option>
                   </datalist>
                </form>
                </div> 
+
                <!-- Раздел кнопка -->
                <div class="button-block">
                   <h3 class="description__h3">Кнопка</h3>
@@ -303,26 +306,24 @@
                </div>
 
                <!-- Раздел Чекбокс, радиобаттон -->
-               <div class="checkbox-radio">
+         <div class="checkbox-radio">
                   <h3 class="description__h3">Чекбокс, радиобаттон</h3>
-               <div class="checkbox-radio__grid">
+            <div class="checkbox-radio__grid">
 
-                     <div class="checkbox-radio__left">
-                        <input class="checkbox-radio__input" type="checkbox" id="1"> 
-                        <label for="1" class="checkbox-radio__label">Птица счастья завтрашнего дня</label>
-                     </div>   
+               <div class="checkbox-radio__left">
+                  <input class="checkbox-radio__input-checkbox" type="checkbox" id="1"> 
+                  <label for="1" class="checkbox-radio__label-checkbox">Птица счастья завтрашнего дня</label>
+               </div>   
   
 
-                     <div class="checkbox-radio__right">
-                        <input 
-                        class="checkbox-radio__input" 
-                        type="radio" id="2"> 
-                        <label for="2" class="checkbox-radio__label">Пластмассовый мир победил</label>
-                     </div>   
-
-           
-               </div>
-               </div>
+               <div class="checkbox-radio__right">
+                  <input 
+                  class="checkbox-radio__input-radio" 
+                  type="radio" id="2"> 
+                  <label for="2" class="checkbox-radio__label-radio">Пластмассовый мир победил</label>
+               </div>   
+            </div>
+         </div>
 
                <!-- Аккордеон -->
          <div class="accord">
