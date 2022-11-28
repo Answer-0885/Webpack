@@ -1,4 +1,4 @@
 const one = () => {
-   console.log('модуль One!')
-}
-export default one
+   console.log('модуль One!');
+};
+export default one;
