@@ -1,14 +1,5 @@
-import buttonBlock from './modules/buttonBlock';
-import form from './modules/form';
-import accordeon from './modules/accordeon';
-import burger from './modules/burger'; 
-import menu from './modules/menu'; 
-import dropDownList from './modules/dropDownList'; 
+import one from './modules/one'
+import two from './modules/two'
 
-
-buttonBlock();
-form();
-accordeon();
-burger();
-menu();
-dropDownList();
+one()
+two()
